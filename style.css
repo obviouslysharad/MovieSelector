@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'lato-bold', sans-serif;
+    font-weight: 500;
+    color: white;
+    background-color: #242333;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.movie-container select{
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    padding: 2px;
+}
+
+.seat{
+    background-color: #444451;
+    height: 10px;
+    width: 10px;
+    margin: 2px;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+}
+.row{
+    display: flex;
+    margin-bottom: 3px;
+    justify-content: center;
+}
+
+.occupied{
+    background-color: darkred;
+}
+
+.seat:nth-of-type(2){
+    margin-right: 10px;
+}
+
+.selected{
+    background-color: whitesmoke;
+}
+
+.legend{
+    display: flex;
+    justify-content: center;
+    /* list-style-type: none */
+    padding:5px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.2);
+    color: #777;
+}
+
+.legend li{
+    margin-right: 10px;
+    display:flex;
+    list-style-type: none;
+}
+
+.seat:nth-last-of-type(2){
+    margin-left: 10px
+}
+
+.container{
+    perspective: 1000px;
+    
+}
+
+.container .seat:not(.occupied):not(.selected):hover{
+    background-color: white;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.screen{
+    height: 70px;
+    width: 100%;
+    /* margin: 10px; */
+    /* margin: 10px 10px 10px 0px; */
+    transform: rotateX(45deg);
+    background-color: #fff;
+    box-shadow: 0px 5px 7px rgba(250, 250, 250, 0.7);
+}
